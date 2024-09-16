@@ -48,5 +48,27 @@ package com.sample.arrays;
  * 1 ≤ arr[i] ≤ 1018
  */
 public class CountInversions {
-  
+
+  // Time complexity: O(n^2)
+  public static int solutionOne(int[] arr) {
+    int cnt = 0;
+    for (int i = 0; i < arr.length - 1; i++) {
+      for (int j = i + 1; j < arr.length; j++) {
+        if (arr[i] > arr[j]) {
+          cnt++;
+        }
+      }
+    }
+    return cnt;
+  }
+
+  public static void main(String[] args) {
+    int[] arr1 = { 2, 4, 1, 3, 5 };
+    int[] arr2 = { 6, 3, 2, 5, 4 };
+    int[] arr3 = { 2, 3, 4, 5, 6 };
+    System.out.println(solutionOne(arr1)); // output 3
+    System.out.println(solutionOne(arr2)); // output 6
+    System.out.println(solutionOne(arr3)); // output 0
+  }
+
 }

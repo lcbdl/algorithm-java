@@ -59,12 +59,12 @@ public class FindDuplicates extends AlgorithmBase {
   public static void main(String[] args) {
     int[] c = { 0 };
     // findDuplicates(a).forEach(item -> System.out.println(item));
-    printArray(findDuplicates(c).toArray());
+    printArray(findDuplicates2(c).toArray());
     int[] a = { 0, 3, 1, 2 };
     // findDuplicates(a).forEach(item -> System.out.println(item));
-    printArray(findDuplicates(a).toArray());
+    printArray(findDuplicates2(a).toArray());
     int[] b = { 0, 0, 2, 4, 3, 5, 1, 3, 5, 6 };
     // findDuplicates(b).forEach(item -> System.out.println(item));
-    printArray(findDuplicates(b).toArray());
+    printArray(findDuplicates2(b).toArray());
   }
 }

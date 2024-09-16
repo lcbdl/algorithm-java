@@ -2,9 +2,11 @@ package com.sample.arrays;
 
 import java.util.Arrays;
 
-public class FindClosestSumPair {
+import com.sample.AlgorithmBase;
 
-  public static int[] findCloseToZeroSumPair(int[] arr) {
+public class FindClosestSumPair extends AlgorithmBase {
+
+  public static int[] findClosestToZeroSumPair(int[] arr) {
     Arrays.sort(arr);
     int closestSum = Integer.MAX_VALUE;
     int left = 0, right = arr.length - 1;
@@ -29,8 +31,11 @@ public class FindClosestSumPair {
   }
 
   public static void main(String[] args) {
-    int[] nums = { -2, -4, 6, 8, 1, -5, 7 };
-    int[] result = findCloseToZeroSumPair(nums);
+    int[] nums = { -3, -4, 6, 8, 1, -5, 7 };
+    System.out.print("The original array: ");
+    printArray(nums);
+    System.out.print("\n The closest to zero pair is: ");
+    int[] result = findClosestToZeroSumPair(nums);
     System.out.println(result[0] + " " + result[1]);
   }
 }

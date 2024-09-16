@@ -22,9 +22,12 @@ import com.sample.AlgorithmBase;
 public class FindIndexesOfSubarrayWithGivenSum extends AlgorithmBase {
 
   public static void main(String[] args) {
-    int[] A = { 1, 4, 20, 3, 10, 5, 18 };
+    int[] A = { 1, 4, 20, 2, 10, 5, 20 };
     int S = 33;
-    List<Integer> result = findIndexesOfSubarrayWithGivenSum2(A, S);
+    System.out.print("Original Array is: ");
+    printArray(A);
+    List<Integer> result = findIndexesOfSubarrayWithGivenSum(A, S);
+    System.out.print("The sub-arry for the given sum " + S + " is: ");
     printArray(result.toArray());
   }
 

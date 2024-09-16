@@ -36,6 +36,43 @@ public class MergeSort extends AlgorithmBase {
     return arr;
   }
 
+  private static int[] merge2(int[] arr1, int[] arr2) {
+    int[] arr = new int[arr1.length + arr2.length];
+
+    int i = 0;
+    int x = 0;
+    int y = 0;
+    while (x < arr1.length && y < arr2.length) {
+      if (arr1[x] < arr2[y]) {
+        arr[i] = arr1[x];
+        x++;
+        i++;
+      } else if (arr2[y] < arr1[x]) {
+        arr[i] = arr2[y];
+        y++;
+        i++;
+      } else {
+        arr[i] = arr1[x];
+        i++;
+        arr[i] = arr1[x];
+        i++;
+        x++;
+        y++;
+      }
+    }
+    while (x < arr1.length) {
+      arr[i] = arr1[x];
+      i++;
+      x++;
+    }
+    while (y < arr2.length) {
+      arr[i] = arr2[y];
+      i++;
+      y++;
+    }
+    return arr;
+  }
+
   public static int[] mergeSort(int[] arr) {
     if (arr.length > 1) {
       int halfLen = arr.length / 2;
