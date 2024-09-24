@@ -7,6 +7,10 @@ public class AlgorithmBase {
     System.out.println(Arrays.toString(arr));
   }
 
+  public static void printArray(long[] arr) {
+    System.out.println(Arrays.toString(arr));
+  }
+
   public static void printArray(Object[] arr) {
     System.out.println(Arrays.deepToString(arr));
   }
