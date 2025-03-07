@@ -7,7 +7,20 @@ import java.util.Queue;
 import java.util.Set;
 
 public class BestPath {
-
+    /**
+    * Giving a string S, and an array of strings strGrid.
+    * strGrid contains {"K....", "S...L", "....R", "LX...", "XM..S"}
+    * 
+    * Write a solutin to construct S from strGrid with shortest path.
+    * for example, S = "KLRML",
+    * K -> L, steps = 3
+    * L -> R, steps = 5
+    * R -> M, steps = 5
+    * M -> L, steps = 2
+    * So it returns 15
+    *
+    * Return: total steps to build the string.  It will return -1 if any letter in the string is missing in the grid.
+    */
     public static int findBestPath(String S, String[] strGrid) {
         char[][] grid = convertGrid(strGrid);
 
